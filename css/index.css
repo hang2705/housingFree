@@ -1,0 +1,878 @@
+
+/* GLOBAL: dùng chung */
+/* dấu * gọi tất cả ra luôn */
+/* 3 thành phần dùng để xóa khoảng cách của trình duyệt */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
+}
+html{
+    font-size: 18px;
+}
+/* HEADER */
+header{
+    background-color: rgba(25, 25, 25, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: 100px;
+}
+.header_content{
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.header_content h1{
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    line-height: 20px;  
+    letter-spacing: 2px;
+    font-size: 56px;
+  
+}
+.header_content h1 a{ 
+cursor: pointer;
+text-decoration: none;
+color: #fff;
+
+}
+.header_content span{
+    color:#00cdce ;
+    letter-spacing: 2px;
+}
+.header_content ul{
+    list-style:none;
+    float: right;
+    padding: 20px 0;
+
+}
+.header_content ul li{
+    display: inline;
+    padding: 0 10px;
+    margin:0 10px;
+
+}
+.header_content ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding: 10px;
+}
+.header_content ul li a:hover{
+    color:#00cdce;
+    border: none;
+}
+/* CAROUSEL */
+ .carousel_content{
+    padding: 30px 0;
+}
+.item{
+    position: relative;
+   
+}
+.carousel_text{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color:#FFF;
+    text-align: center;
+    padding: 350px 0px;
+
+}
+.carousel_text h1{
+    font-size: 60px;
+    font-weight: 600;
+    color: #FFF;
+    letter-spacing: 3px;
+}
+.carousel_text p{
+    font-size: 24px;
+    font-weight: 400;
+    color: #d3d8d8;
+    line-height: 35px;
+}
+
+.owl-carousel {
+    position: relative;
+}
+.owl-carousel .owl-nav{
+    position: absolute;
+    left: 50px;
+    font-size: 60px;
+    top:45%;
+    color: #d3d8d8 ;
+    
+
+}
+/*  */
+.owl-theme .owl-nav [class*="owl-"]:hover {
+    
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: none;
+}
+.owl-carousel .owl-nav .owl-prev{
+    float: left;
+    
+}
+.owl-carousel .owl-dots{
+    position: absolute;
+    bottom: 10%;
+    left: 47%;
+    top:50;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot span{
+    background: #fff;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+background: #000;
+} 
+
+ .owl-carousel .owl-nav .owl-next{
+    margin-left: 1175px;
+   
+} 
+/* ABOUT */
+.about h3{
+    text-align: center;
+    margin-bottom: 0.8em;
+    font-size: 4em;
+    font-weight: 500;
+    text-align: center;
+}
+.about_content1{
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+}
+.clearfix{
+    clear: both;
+    padding: 40px;
+}
+.about_item{
+    text-align: center;
+    /* padding: 0 10px; */
+}
+.about_item  i{
+    font-size: 1.5em;
+    color: #000;
+    background: #fff;
+    border: 1px solid #7f7777;
+    cursor: pointer;
+    top: 0;
+    width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    line-height: 98px;
+    /* rê chuột */
+    transition: .5s all;
+
+}
+.about_item  i:hover{
+    color: #fff;
+    background: #00cdce;
+}
+.about_item p{
+    line-height: 2em;
+    font-size: 16px;
+    color: #7f7777;
+    margin-top: .8em;
+    letter-spacing: 1px;
+
+}
+
+.about_content2{
+    padding: 30px 140px;
+    text-align: center;
+
+}
+.about_content2 h4{
+    color: #00cdce;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.8em;
+    text-align: center;
+    
+
+}
+.about_content2 p{
+    margin: 5px 0 0 0;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+/* NUMBER */
+.stats{
+    /* tăng chiều cao của section */
+    padding: 70px 0;   
+    background-color: #00cdce;
+}
+.stats h3{
+    text-align: center;
+    margin-bottom: 0.8em;
+    font-size: 3em;
+    font-weight: 500;
+
+}
+.number_content{
+width: 80%;
+margin:0 auto ;
+display: flex;
+/* them khoang cach trai phai nhieu ti */
+justify-content:space-around ;
+text-align: center;
+}
+/* cho chữ hết run theo với số */
+.number_item {
+    width: 25%;
+}
+/* sửa code từ bên style qua html */
+/* lấy thẻ p đầu tiên của class item */
+.number_item p:first-child{
+    color:#fff;
+    font-size: 56px;
+    margin: 0;
+    letter-spacing: 5px;
+}
+/* gọi theo thứ tự con số */
+/* p:nth-child(2)- lấy thứ tự thứ 1,2,3 */
+.number_item p:last-child{
+    font-size: 30px;
+    margin: 0;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+ /* BLOG */
+ .blog{
+     padding: 50px;
+     width: 100%;
+ }
+.blog h3{
+    text-align: center;
+    margin-bottom: 0.8em;
+    font-size: 3em;
+    font-weight: 500;
+}
+.blog_content{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: space-around;
+    
+}
+.blog_item{
+    width: 33.3%;
+   padding: 0 20px;
+   
+}
+.blog_item .more_item{
+    border-top: 5px solid #00cdce;
+    background: #efefef;
+}
+.blog_item .img_item img{
+    width: 100%;
+    height: auto;
+}
+.blog_item .text_item{
+    padding: 15px 15px;
+}
+.text_item h4{
+    font-size: 1.3em;
+    color: #00cdce;
+    letter-spacing: 1px;
+}
+.text_item p{
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1px;
+}
+/* Đè code bootstrap */
+/* chỉnh button bên ngoài read more */
+.btn{
+    border-radius: 0;
+    background: #000000;
+    border: #000000;
+   
+}
+
+.btn-primary{
+    background-color: #000 ;
+    color: #00cdce;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    color:#00cdce;
+    background-color: #000;
+    border-color: #000;
+     box-shadow: 0 0 0 0 #000; 
+}
+
+.modal-header{
+    background-color: #00cdce; 
+}
+/* chỉnh chữ */
+.modal-title {
+    font-size: 2.1em;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+}
+/* chỉnh nút button X */
+button.close{
+    color:#a0260f;
+    opacity: 1;
+}
+.modal-header .close span{
+    font-size: 1em;
+    border: 1;
+    line-height: 2.3em;
+}
+.modal-header .close span:hover{
+color: #000;
+
+}
+.modal-body img{
+width: 100%;
+}
+.modal-body p{
+    padding: 20px 15px;
+    line-height: 2em;
+    color: #999;
+    font-size: 15px;
+}
+
+/* PLAY */
+.play{
+    display:flex;
+    margin: 0 auto;
+    width: 100%;
+    height: 430px;
+}
+.banner-agileits-btm {
+    background-image: url(../img/video.jpg);
+    background-size: cover;
+    text-align: center;
+    background-repeat: no-repeat;
+    width: 45%;
+    float: left;
+    height: 430px;
+}
+.button{
+    margin: 11em 0em 0em;
+}
+.button a {
+    padding: 20px 25px;
+    top: 10em;
+    left: 26.5em;
+    display: inline-block;
+    background: rgba(0, 189, 189, 0.53);
+    border-radius: 55%;
+    color: #ffffff;
+    transition: 0.5s all;
+}
+.matter{
+    background-color: #00cdce;
+    padding: 0em 5em;
+    float: right;
+    width: 55%;
+    height: 430px;
+}
+.matter h2{
+    text-align: center;
+    padding: 30px 0;
+    font-size: 42px;
+    letter-spacing: 3px;
+    font-weight: 500;
+   
+}
+.matter p{
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #fff;
+    line-height: 2em;
+    text-align: center;
+    padding: 0px 10px;
+   
+}
+.matter button{
+    margin-left: 200px;
+}
+/* .some-text-one{
+    padding: 20px;
+}
+.some-text-one a {
+    color: #00cdce;
+    font-size: 17px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    padding: 7px 18px;
+    background: #000;
+    display: inline-block;
+    margin-left: 190px;
+    transition: all 0.5s;
+}
+.some-text-one a:hover{
+    color: #fff;
+}  */
+
+
+/* PORTFOLIO */
+ .portfolio{
+    padding: 40px 0;
+}
+.portfolio h3{
+    margin-bottom: 0.8em;
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 5px;
+}
+ .portfolio_content{
+    /* chia cột */
+    display: grid;
+    /* Chia cột- mỗi cột có kích thước bằng nhau nên dùng 1/4 */
+    grid-template-columns: repeat(3,1fr);
+    /* cách đều các mặt tiếp xúc */
+    gap: 20px 25px;
+    width: 80%;
+    margin: 0 auto;   
+}
+.portfolio_item img{
+width: 100%;
+display: block;
+height: 100%;
+}
+.portfolio_item {
+    position: relative;
+}
+ .portfolio_item .gallery_wrap{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 90%;
+    background-color: rgba(0,0,0,0.8);
+    color:white;
+    margin: 12px 18px;
+    padding: 17px 35px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    cursor: pointer;
+    
+} 
+ .portfolio_item:hover .gallery_wrap{
+    opacity: 1;
+    transition: all 0.5s;
+}
+.portfolio_item .gallery_wrap h3{
+    font-size: 1.5em;
+    color: #00cdce;
+    padding: 1em 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-bottom: 0.8em;
+}
+.portfolio_item .gallery_wrap p{ 
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+}  
+
+.subscribe{
+    padding: 50px 0;
+  
+}
+.subscribe_content{
+    padding: 50px 0;
+    background-color: #00cdce;
+}
+.sub_text{
+    text-align: center;
+    /* margin-bottom: 1em; */
+}
+.sub_text .title-w3-agile{
+    margin-bottom: 0.8em;
+    font-size: 3em;
+    letter-spacing: 3px;
+}
+.sub_text p{
+    text-align: center;
+    padding: 0px 263px;
+    letter-spacing: 1px;
+    color: white;
+}
+.letter-sub {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+ } 
+.letter_sub input[type="email"] {
+    width: 40%;
+    padding: 15px;
+    border: none;
+    font-size: 13px;
+    color: #000000;
+    font-weight: 600;
+    outline: none;
+    letter-spacing: 1px;
+    margin: 20px 400px;
+}
+.send-button {
+text-align: center;
+}
+.send-button button.btn {
+    margin: 0.8em 0 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #fff;
+    padding: 6px 50px;
+    border: 1px solid #000;
+    outline: none;
+    background-color: #000;
+    border-radius: 0px;
+    transition: 0.5s all;
+    text-decoration: none;
+}
+/* AGENTS */
+.agents {
+   padding: 20px 0;
+
+}
+.agents h2{
+    margin-bottom: 0.8em;
+    color: #000;
+    font-size: 3em;
+    font-weight: 500;
+    text-align: center;
+}
+.agents_content {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px 25px;
+    width: 80%;
+    margin: 0 auto;
+}
+.agents_item{
+    position: relative;
+}
+.agents_item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+  
+}
+.agents_dark{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.79);
+    color: white;
+    opacity: 1;
+}
+
+.agents_dark h3{
+    text-align: center;
+    margin: 0;
+    color: #00cdce;
+    font-size: 1em;
+    margin-bottom: 5px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 3px;
+}
+.agents_dark:hover h3{
+    color: white;
+
+}
+.agents_dark p{
+text-align: center;
+color: #FFFFFF;
+font-size: .9em;
+margin: 0;
+}
+
+.agents_socials ul{
+        list-style: none;  
+        padding: 15px 40px;
+}
+.agents_socials ul li {
+    display: inline-block;
+    margin-left: 20px;
+    /* padding: 3px 10px; */
+} 
+.agents_socials ul li a  .fa-facebook-f{
+    font-size: 15px;
+    border: 2px solid;
+    letter-spacing: 0px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    transition: 0.5s all;
+
+ 
+}
+.agents_socials ul li a  .fa-facebook-f:hover{
+background: #337ab7;
+}
+.agents_socials ul li a  .fa-twitter{
+    font-size: 15px;
+    border: 2px solid;
+    letter-spacing: 0px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    transition: 0.5s all;
+    
+}
+.agents_socials ul li a  .fa-twitter:hover{
+    background: #337ab7;
+}
+.agents_socials ul li  .fa-wifi{
+    font-size: 15px;
+    border: 2px solid;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    line-height: 35px;
+    text-align: center;
+    transition: 0.5s all;  
+}
+.agents_socials ul li  .fa-wifi:hover{
+    background: #f26522;
+}
+/* CONTACT MAP */
+.contact_map iframe{
+    padding: 50px 0;
+     width: 100%;  
+}
+/* CONTACT FORM */
+.contact{
+    width: 100%;
+    height: 450px;
+}
+.contact h2{
+    color: #000;
+    font-size: 3em;
+    font-weight: 500;
+    text-align: center;
+}
+  .contact_form{
+      width: 100%;
+      padding: 30px;
+  }
+.contact_form  .contact_left{
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+/* chia grid */
+    display: grid;
+    grid-template-columns:repeat(1,1fr);
+    gap: 25px;
+    margin: 0 auto;
+}
+.contact_left input{
+    font-size: 15px;
+    border:1px solid black ;
+    transition: all 0.5s;
+    grid-column: 1/ 1;
+
+    color: #000;
+    background: rgb(239, 239, 239);
+    outline: none;
+    font-size: 1em;
+    padding: .6em 1em;
+     margin-left: 80px ;
+    border: none;
+    border-bottom: solid 2px #999;
+  
+}
+.contact_left input:hover{
+    border-bottom:solid 2px black ;
+}
+.contact_form .contact_right{
+    float: right;
+    width: 50%;
+    grid-template-columns: repeat(1,1fr);
+    margin: auto;
+    gap:30px;
+    display: grid;
+}
+.contact_right textarea{
+    width: 80%;
+    height: 200px;
+    margin-left: 10px ;
+    padding: 10px;
+    color: #000;
+    background: rgb(239, 239, 239);
+    outline: none;
+    font-size: 1em;
+    border: none;
+    border-bottom: solid 2px #999;
+    resize: none;
+}
+.contact_right textarea:hover{
+    border-bottom: solid 2px black;
+}
+.contact_right button{
+    margin-left: 10px ;
+    width: 80%;
+    height: 50px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    border:1px solid black;
+}
+.contact_right button:hover{
+    color: black;
+    background: #00cdce;
+    border: #00cdce;
+}
+.footer{
+    background: #00cdce;
+    width: 100%;
+    height: 100px;
+}
+.footer .footer_left{
+float: left;
+width: 50%;
+text-align: right;
+padding: 40px 0;
+}
+.footer .footer_left p{
+    font-size: 16px;
+    color: #fff;
+}
+.footer .footer_left p a{
+    color: red;
+    text-decoration: none;
+}
+.footer .footer_left p a:hover{
+    color:white;
+    transition: all 0.5s;
+     
+}
+.footer .footer_right{
+    float: right;
+    width: 50%;
+    text-align: center;
+ 
+}
+.footer_right ul{
+    list-style: none;
+    padding: 35px 0;
+    margin-right: 30px;
+}
+.footer_right ul li{
+    display: inline;
+    padding: 50px 10px;
+}
+.footer_right ul li a .fa-facebook-f{
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 5px 3px;
+    
+}
+.footer_right ul li a .fa-facebook-f:hover{
+    color: #337ab7;
+ 
+}
+.footer_right ul li a .fa-twitter{
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 5px 3px;
+}
+.footer_right ul li a .fa-twitter:hover{
+    color: #337ab7;
+ 
+}
+.footer_right ul li a .fa-wifi{
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 5px 0;
+}
+.footer_right ul li a .fa-wifi:hover{
+    color: #f26522;
+ 
+}
+.footer_right ul li a .fa-vk{
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 5px 3px;
+}
+.footer_right ul li a .fa-vk:hover{
+    color: #337ab7;
+}
+.clearfix{
+    content: '';
+    padding: 30px 0;
+}
+/* BACK TO TOP */
+.backToTop{
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 50%;
+    color:black;
+    font-size: 3rem;
+    /* trượt theo người dùng và đẩy qua bên gốc phải */
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    /* muốn ẩn button back to top */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+ /* back-to-top button visible */
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+  }
